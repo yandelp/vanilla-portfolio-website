@@ -29,10 +29,10 @@ h1 {
     font-size: 70px;
     letter-spacing: 0.1em;
 }
-.large-h2 {
+.hero-subheading-ctn h2, .about-desc-inner-txt h2 {
     letter-spacing: 0.1em;
 }
-.large-h2, h1 {
+.hero-subheading-ctn h2, .about-desc-inner-txt h2, h1 {
     margin: 0;
 }
 ::selection {
@@ -90,7 +90,6 @@ nav, .nav-socials, .nav-links, .nav-icon, .link-icon, .nav-apps {
     align-items: center;
 }
 nav {
-    display: flex;
     justify-content: space-between;
     backdrop-filter: blur(10px);
     height: 40px;
@@ -117,7 +116,7 @@ nav {
     isolation: isolate;
     overflow-x: clip;
     display: flex;
-    padding: 0px 20px 0px 20px;
+    padding: 0 20px;
 }
 .hero-subheading-ctn {
     text-align: right;
@@ -251,6 +250,7 @@ nav {
 
 /* about styles */
 .about-section {
+    background-image: linear-gradient(to top, #8594a1, #162a47);
     display: flex;
 }
 .about-ctn {
@@ -260,9 +260,9 @@ nav {
 .about-grid {
     display: grid;
     grid-template-columns: minmax(360px, 1.4fr) minmax(0, 1fr);
-    grid-template-areas: 
-    "desc photo1"
-    "desc photo2";
+    grid-template-areas:
+        "desc photo1"
+        "desc photo2";
     gap: 40px 64px;
     width: 100%;
     padding: 60px 40px;
@@ -275,6 +275,7 @@ nav {
     padding: 30px;
 }
 .about-desc-inner {
+    background-color: #9b9b9b4a;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -333,6 +334,7 @@ nav {
     outline-offset: 3px;
 }
 .grid-photo {
+    background-color: #162a474a;
     margin: 0;
     min-width: 0;
     padding: 12px 12px 26px;
@@ -356,6 +358,7 @@ nav {
     justify-self: end;
 }
 .pic-caption {
+    display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 6px;
@@ -364,6 +367,8 @@ nav {
 
 /* exp/proj section */
 .whativedone {
+    display: flex;
+    background-color: #8594a1;
     align-items: flex-start;
     justify-content: center;
 }
@@ -374,7 +379,7 @@ nav {
     justify-content: center;
     align-items: center;
 }
-.exp-proj-section > .translucent-dblue-box:not(.centered-title), .experiences-list, .experience {
+.list-section-outer, .experiences-list, .experience {
     width: 100%;
 }
 .list-section-inner {
@@ -387,6 +392,7 @@ nav {
     gap: 15px;
 }
 .list-section-outer {
+    background-color: #162a474a;
     border: #e0e4e3 1px solid;
     padding: 10px;
 }
@@ -394,6 +400,7 @@ nav {
     margin: 5px;
 }
 .experiences-list {
+    background-color: #9b9b9b4a;
     display: flex;
     justify-content: space-between;
     border: #e0e4e3 1px solid;
@@ -405,7 +412,7 @@ nav {
 .centered-title {
     letter-spacing: 2px;
     display: flex;
-    background-color: #9b9b9b4a;
+    background-color: #162a474a;
     justify-content: center;
     align-items: center;
     width: fit-content;
@@ -425,7 +432,6 @@ footer {
     font-size: 12px;
     font-weight: 400;
     line-height: 1.6;
-    letter-spacing: 0.3px;
     color: #b8c4d2;
 }
 footer p {
@@ -450,43 +456,30 @@ footer p {
     letter-spacing: 1px;
     font-family: 'Inter', Calibri, 'Trebuchet MS', sans-serif;
 }
-.flex {
-    display: flex;
+
+h4, .s-txt, .xs-txt{
+    margin: 0;
 }
-.s-h4 {
-    font-size: small;
-}
+
 .s-txt {
-    font-size: x-small;
+    font-size: small;
 }
 .xs-txt {
     font-size: xx-small;
 }
-.bw-fade {
-    background-image: linear-gradient(to top, #8594a1, #162a47);
-}
-.wb-fade {
+#cameos {
     background-image: linear-gradient(to bottom, #8594a1, #162a47);
-}
-.bg-lightblue {
-    background-color: #8594a1;
-}
-.translucent-dblue-box {
-    background-color: #162a474a;
-}
-.translucent-lgray-box {
-    background-color: #9b9b9b4a;
 }
 
 /* animated gradient for emphasis */
 .emphasis {
     color: transparent;
     background: linear-gradient(
-    90deg,
-    #a8d8ff,
-    #e0e4e3,
-    #74b9ff,
-    #a8d8ff
+        90deg,
+        #a8d8ff,
+        #e0e4e3,
+        #74b9ff,
+        #a8d8ff
     );
     background-size: 200% 100%;
     background-clip: text;
@@ -507,10 +500,10 @@ footer p {
 @media (max-width: 1000px) {
     .about-grid {
         grid-template-columns: minmax(0, 1fr);
-        grid-template-areas: 
-        "desc"
-        "photo1"
-        "photo2";
+        grid-template-areas:
+            "desc"
+            "photo1"
+            "photo2";
         gap: 36px;
         padding: 32px 16px;
     }
@@ -528,7 +521,7 @@ footer p {
     }
 }
 @media (max-width: 768px) {
-    .hide-on-mobile {
+    .backdrop-img, .line-field {
         display: none;
     }
 }
