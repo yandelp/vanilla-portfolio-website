@@ -59,7 +59,7 @@
   <main>
     <section id="home" class="hero">
       <div>
-        <img class="backdrop-img" src="src/assets/sun.png">
+        <img class="backdrop-img" src="src/assets/hero/sun.png">
       </div>
       <div class="left-hero">
         <div id="hero-icon-ctn">
@@ -109,13 +109,13 @@
             </div>
           </div>
           <figure class="grid-photo photo-one">
-            <img src="src/assets/run-me.jpeg" alt="Me outdoors">
+            <img src="src/assets/about/run-me.jpeg" alt="Me outdoors">
             <figcaption class="pic-caption">
               <span class="pic-caption">my first 5k</span>
             </figcaption>
           </figure>
           <figure class="grid-photo photo-two">
-            <img src="src/assets/painting-me.jpeg" alt="Me in front of a painting">
+            <img src="src/assets/about/painting-me.jpeg" alt="Me in front of a painting">
             <figcaption class="pic-caption">
               <span >museum tour</span>
             </figcaption>
@@ -123,91 +123,73 @@
         </div>
       </div>
     </section>
-    <section id="whativedone" class="whativedone">
+    <section id="whativedone" class="whativedone" aria-labelledby="work-title">
       <div class="exp-proj-section">
         <div class="centered-title">
-          <h2>what i've done</h2>
+          <h2 id="work-title emphasis"><span class="emphasis">what i've done</span></h2>
         </div>
         <div class="list-section-outer">
-          <div class="list-section">
-            <div class="list-section-inner">
-              <div class="list-header">
-                <h3>experience</h3>
-                <p>my professional journey so far</p>
-              </div>
-              <div class="experiences-list">
-                <div class="list-items">
-                  <img src="/logo.png" alt="me">
-                  <div class="list-txt">
-                    <h4 class="s-txt">Nexus Horizon | Founding Software Engineer</h4>
-                    <p class="xs-txt">Miami, FL</p>
-                  </div>
-                </div>
-              </div>
-              <div class="experiences-list">
-                <div class="list-items">
-                  <img src="/logo.png" alt="me">
-                  <div class="list-txt">
-                    <h4 class="s-txt">Nexus Horizon | Founding Software Engineer</h4>
-                    <p class="xs-txt">Miami, FL</p>
-                  </div>
-                </div>
-              </div>
-              <div class="experiences-list">
-                <div class="list-items">
-                  <img src="/logo.png" alt="me">
-                  <div class="list-txt">
-                    <h4 class="s-txt">Nexus Horizon | Founding Software Engineer</h4>
-                    <p class="xs-txt">Miami, FL</p>
-                  </div>
-                </div>
-              </div>
+          <div class="list-section" aria-labelledby="experience-title">
+            <div class="list-header">
+              <h3 id="experience-title">experience</h3>
+              <p>my professional journey so far</p>
             </div>
+            <article class="experiences-list list-items" aria-labelledby="nexus-title">
+              <figure>
+                <img src="src/assets/exp/emerge-2.jpeg" alt="">
+              </figure>
+              <div class="list-item">
+                <div class="logo-img-ctn">
+                  <img class="logo-img" src="src/assets/logos/nexus-logo.webp" alt="">
+                </div>
+                <div class="list-txt">
+                  <div class="separated-title">
+                    <h4>Nexus Horizon</h4>
+                    <p class="xs-txt">Sep. 2025 - May 2026</p>
+                  </div>
+                  <div class="separated-title">
+                    <p class="s-txt">Founding SWE</p>
+                    <p class="xs-txt">Miami, FL</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="experiences-list list-items" aria-labelledby="nexus-title">
+              <figure>
+                <img src="src/assets/exp/init-6.jpeg" alt="">
+              </figure>
+              <div class="list-item">
+                <div class="logo-img-ctn">
+                  <img class="logo-img" src="src/assets/logos/init-logo.png" alt="">
+                </div>
+                <div class="list-txt">
+                  <div class="separated-title">
+                    <h4>INIT</h4>
+                    <p class="xs-txt">Aug. 2024 - May 2026</p>
+                  </div>
+                  <div class="separated-title">
+                    <p class="s-txt">President</p>
+                    <p class="xs-txt">Miami, FL</p>
+                  </div>
+                </div>
+              </div>
+            </article>
           </div>
-          <div id="projects" class="list-section">
-            <div class="list-section-inner">
-              <div class="list-header">
-                <h3>projects</h3>
-                <p>some stuff i've worked on</p>
-              </div>
-              <div class="experiences-list">
-                <div class="list-items">
-                  <img src="/logo.png" alt="me">
-                  <div class="list-txt">
-                    <h4 class="s-txt">Nexus Horizon | Founding Software Engineer</h4>
-                    <p class="xs-txt">Miami, FL</p>
-                  </div>
-                </div>
-              </div>
-              <div class="experiences-list">
-                <div class="list-items">
-                  <img src="/logo.png" alt="me">
-                  <div class="list-txt">
-                    <h4 class="s-txt">Nexus Horizon | Founding Software Engineer</h4>
-                    <p class="xs-txt">Miami, FL</p>
-                  </div>
-                </div>
-              </div>
-              <div class="experiences-list">
-                <div class="list-items">
-                  <img src="/logo.png" alt="me">
-                  <div class="list-txt">
-                    <h4 class="s-txt">Nexus Horizon | Founding Software Engineer</h4>
-                    <p class="xs-txt">Miami, FL</p>
-                  </div>
-                </div>
-              </div>
+          <div id="projects" class="list-section" aria-labelledby="projects-title">
+            <div class="list-header">
+              <h3 id="projects-title">projects</h3>
+              <p>some stuff i've worked on</p>
             </div>
           </div>
         </div>
-      </div> 
+      </div>
     </section>
-      
+
     <section id="cameos">
 
     </section>
   </main>
-  <footer class="site-footer" id="contact">
+  <footer class="site-footer">
     <p class="footer-copyright">
       &copy; <span id="year"></span>
       Yandel Polanco. All rights reserved.
