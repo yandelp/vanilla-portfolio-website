@@ -374,7 +374,7 @@ nav {
     justify-content: center;
 }
 .exp-proj-section {
-    width: 80%;
+    width: 65%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -406,7 +406,9 @@ nav {
     gap:15px;
 }
 
-
+.list-items img{
+    max-width: 50px;
+}
 
 .list-section-outer {
     background-color: #162a474a;
@@ -540,6 +542,7 @@ h4, .s-txt, .xs-txt{
         display: none;
     }
 }
+
 @media (prefers-reduced-motion: reduce) {
     .emphasis {
         animation: none;
