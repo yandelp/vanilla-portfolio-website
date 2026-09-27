@@ -2,13 +2,19 @@
 :root {
     --strip-w: 3vw;
     --rule: 1px;
-    --nav-height: 40px;
+    --nav-height: 50px;
 }
 *,
 *::before,
 *::after {
     box-sizing: border-box;
 }
+
+img, svg {
+    max-width: 100%;
+    height: auto;
+}
+
 body, html {
     font-family: "Michroma", sans-serif;
     margin: 0;
@@ -78,7 +84,6 @@ i, .nav-link {
 /* header, navbar */
 header {
     position: sticky;
-    overflow: hidden;
     top: 0;
     left: 0;
     z-index: 40;
@@ -91,19 +96,30 @@ nav, .nav-socials, .nav-links, .nav-icon, .link-icon, .nav-apps {
 }
 nav {
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px 20px;
     backdrop-filter: blur(10px);
-    height: 40px;
-    padding: 25px;
+    min-height: var(--nav-height);
+    padding: 10px 25px;
     border-bottom: 1px solid #3c4d66;
 }
 .nav-icon, .link-icon {
     gap: 20px;
 }
 .nav-links {
-    gap: 16px;
+    flex-wrap: wrap;
+    min-width: 0;
+    max-width: 100%;
+    gap: 10px 16px;
 }
 .nav-socials {
-    gap: 25px;
+    flex-wrap: wrap;
+    min-width: 0;
+    max-width: 100%;
+    gap: 10px 25px;
+}
+.nav-icon p {
+    margin: 0;
 }
 .nav-apps {
     gap: 10px;
@@ -425,6 +441,10 @@ nav {
     overflow: hidden;
 }
 
+.listheader figure img {
+    width:100%;
+}
+
 .experiences-list > figure {
     margin: 0;
     aspect-ratio: 16 / 9;
@@ -460,6 +480,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
+    flex-wrap: wrap;
     gap: 16px;
 }
 .experiences-list h4 { 
