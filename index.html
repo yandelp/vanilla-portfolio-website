@@ -17,7 +17,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
   <!-- js -->
-   <script type="module" src="/src/main.js"></script>
+   <script type="module" src="/src/main.js" defer></script>
+   <script src="src/podcast.js" defer></script>
 </head>
 <body>
   <header>
@@ -126,7 +127,7 @@
     <section id="whativedone" class="whativedone" aria-labelledby="work-title">
       <div class="exp-proj-section">
         <div class="centered-title">
-          <h2 id="work-title emphasis"><span class="emphasis">what i've done</span></h2>
+          <h2 id="work-title"><span class="emphasis">what i've done</span></h2>
         </div>
         <div class="list-section-outer">
           <div class="list-section" aria-labelledby="experience-title">
@@ -286,8 +287,32 @@
       </div>
     </section>
 
-    <section id="cameos">
-
+    <section id="cameos" aria-labelledby="cameos-title">
+      <div class="centered-title">
+        <h2 id="cameos-title">my cameos</h2>
+      </div>
+      <div class="cameos-inner">
+        <figure class="experiences-list">
+          <div class="podcast-stage">
+            <button type="button" class="podcast-poster" data-video-id="KP9fNRGhlV4" aria-label="Play my Sharkcast episode.">
+              <img src="https://i.ytimg.com/vi/KP9fNRGhlV4/hqdefault.jpg" alt="Sharkcast episode about the first SharkByte hackathon." loading="lazy" decoding="async">
+            </button>
+          </div>
+          <figcaption class="pic-caption">check out my appearance on sharkcast!</figcaption>
+        </figure>
+        <figure class="experiences-list">
+          <img src="src/assets/cameos/billboard.jpeg" alt="My appearance on a Miami Dade College billboard.">
+          <figcaption class="pic-caption">my first billboard appearance :O</figcaption>
+        </figure>
+        <figure class="experiences-list">
+          <img src="src/assets/cameos/speech.jpeg" alt="My speech at the MDC Honors College Induction.">
+          <figcaption class="pic-caption">spoke @ mdc honors induction to 700 people!</figcaption>
+        </figure>
+        <figure class="experiences-list">
+          <img src="src/assets/cameos/orientation.jpeg" alt="My speech at the MDC Honors College North Campus orientation.">
+          <figcaption class="pic-caption">told my story to honors college newgens</figcaption>
+        </figure>
+      </div>
     </section>
   </main>
   <footer class="site-footer">

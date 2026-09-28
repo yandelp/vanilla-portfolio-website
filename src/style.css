@@ -49,8 +49,9 @@ section {
     min-height: 100vh;
 }
 section:not(.hero) {
-    padding: 20px;
+    padding: 40px 20px;
 }
+
 main {
     padding-top: 0;
     width: 100%;
@@ -401,9 +402,10 @@ nav {
     background-color: #162a474a;
     padding: 20px 30px;
     text-align: center;
-    margin-bottom: 20px;
     box-shadow: -8px 8px #0b192b35;
-    border: 1px solid #8594a1
+    border: 1px solid #8594a1;
+    width: fit-content;
+    margin: 0 auto 40px;
 }
 .centered-title h2 { 
     margin: 0;
@@ -557,8 +559,81 @@ h4, .s-txt, .xs-txt{
 .xs-txt {
     font-size: xx-small;
 }
-#cameos {
+
+/* cameos section */
+section#cameos {
+    padding: 20px 0 100px;
     background-image: linear-gradient(to bottom, #8594a1, #162a47);
+}
+
+.cameos-inner {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(24px, 6vw, 100px);
+    width: min(1100px, calc(100% - 48px));
+    margin: clamp(60px, 13vw, 190px) auto 0;
+}
+.cameos-inner .experiences-list {
+    min-width: 0;
+    margin: 0;
+    border: 0;
+    background-color: #9b9b9b4a;
+}
+.cameos-inner .experiences-list > img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border: 1px solid #8594a1;
+}
+.cameos-inner .pic-caption {
+    min-height: 64px;
+    margin: 0;
+    padding: 16px;
+    text-align: center;
+    font-size: 13px;
+    line-height: 1.6;
+    letter-spacing: 1px;
+}
+@media (max-width: 640px) {
+    .cameos-inner {
+        grid-template-columns: minmax(0, 1fr);
+        max-width: 500px;
+        gap: 30px;
+    }
+}
+
+.podcast-stage {
+    aspect-ratio: 16 / 9;
+    border: 1px solid #8594a1;
+    background: #162a47;
+}
+.podcast-poster {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+}
+.podcast-poster img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.podcast-poster:focus-visible {
+    outline: 3px solid #a8d8ff;
+    outline-offset: -3px;
+}
+.podcast-stage iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
 }
 
 /* animated gradient for emphasis */
