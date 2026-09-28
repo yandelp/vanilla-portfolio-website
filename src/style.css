@@ -212,12 +212,54 @@ nav {
 #hero-heading h1 {
     margin-right: -0.18em;
 }
+
 #hero-icon-ctn {
+    position: relative;
+    isolation: isolate;
     display: flex;
     align-items: center;
     justify-content: center;
+    max-width: 100%;
     padding: 145px 0px;
 }
+
+#hero-icon-ctn::before,
+#hero-icon-ctn::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* waves */
+#hero-icon-ctn::before {
+    width: 700px;
+    height: 600px;
+    left: 30%;
+    top: 45%;
+    background: url("assets/hero/waves.svg") center / contain no-repeat;
+}
+
+/* orb */
+#hero-icon-ctn::after {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background: radial-gradient(
+        circle,
+        transparent 40%,
+        rgba(255, 255, 255, 0.12) 100%
+    );
+}
+
+#hero-icon-ctn img {
+    max-width: 200px;
+    border-radius: 50%;
+}
+
 .backdrop-img {
     position: absolute;
     right: -160px;
@@ -569,9 +611,9 @@ section#cameos {
 .cameos-inner {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: clamp(24px, 6vw, 100px);
+    gap: clamp(24px, 3vw, 100px);
     width: min(1100px, calc(100% - 48px));
-    margin: clamp(60px, 13vw, 190px) auto 0;
+    margin: clamp(60px, 8vw, 190px) auto 0;
 }
 .cameos-inner .experiences-list {
     min-width: 0;
@@ -668,6 +710,7 @@ section#cameos {
     .centered-title { padding: 18px; }
     .centered-title h2 { font-size: 20px; }
     .list-section-outer, .experiences-list > .list-item { padding: 16px; }
+
 }
 
 @media (max-width: 1000px) {
@@ -691,6 +734,10 @@ section#cameos {
     }
     .photo-two {
         width: min(80%, 210px);
+    }
+    #hero-icon-ctn::before,
+    #hero-icon-ctn::after {
+        display: none;
     }
 }
 @media (max-width: 768px) {
