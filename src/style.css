@@ -414,7 +414,7 @@ nav {
 }
 .photo-two {
     grid-area: photo2;
-    width: min(100%, 240px);
+    width: min(100%, 280px);
     justify-self: end;
 }
 .pic-caption {
@@ -733,7 +733,7 @@ section#cameos {
         width: min(85%, 240px);
     }
     .photo-two {
-        width: min(80%, 210px);
+        width: min(85%, 240px);
     }
     #hero-icon-ctn::before,
     #hero-icon-ctn::after {
