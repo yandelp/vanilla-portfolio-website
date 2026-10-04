@@ -555,7 +555,10 @@ section.whativedone {
   margin: 0;
   padding: 0;
 }
-.whativedone .list-header p { color: var(--muted); margin: 16px 0 0; font: 16px/1.6 Inter,sans-serif; }
+.whativedone .list-header p { 
+    color: #192d49; 
+    margin: 16px 0 0; 
+}
 .work-row {
   color: var(--text);
   background: var(--surface);
@@ -770,6 +773,7 @@ section#cameos {
 
 /* footer */
 .footer-email { color: var(--text); justify-content: center; }
+
 .email-footer {
   flex-wrap: wrap;
   align-items: center;
@@ -778,22 +782,26 @@ section#cameos {
   display: flex;
 }
 footer {
+  display: flex;
+  justify-content:space-between;
   border-top: 1px solid var(--border);
-  text-align: center;
   color: var(--muted);
   letter-spacing: 0;
   flex-wrap: wrap;
-  justify-content: space-between;
   gap: 20px;
   padding: 28px 20px;
   font-family: Inter,Calibri,Trebuchet MS,sans-serif;
   font-size: 12px;
   font-weight: 400;
   line-height: 1.6;
-  display: flex;
 }
+
 .fa-envelope { color: var(--muted); }
 footer p { font-size: 13px; }
+
+.dark-text {
+    color:#192d49;
+}
 
 /* animated gradient for emphasis */
 .emphasis {
@@ -805,21 +813,27 @@ footer p { font-size: 13px; }
   background-clip: text;
   animation: 5s linear infinite emphasis-gradient;
 }
+
 @keyframes emphasis-gradient {
   from { background-position: 200% 50%; }
   to { background-position: 0% 50%; }
 }
 
 /* media queries */
-/* Original hero breakpoint: hide decorative artwork on smaller screens. */
-@media (max-width: 1000px) {
+@media (max-width: 900px) {
   #hero-icon-ctn:before,
   #hero-icon-ctn:after,
   .backdrop-img,
   .line-field { display: none; }
+  nav{
+    justify-content: center;
+  }
 }
 
 @media (max-width: 640px) {
+  footer {
+    justify-content: center;
+  }
   :root { --section-tail: 64px; }
   .about-grid {
     padding-inline: 0;

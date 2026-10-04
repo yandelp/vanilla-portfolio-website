@@ -38,7 +38,7 @@ function escapeText(value = '') {
 
 function render() {
   exp.innerHTML = `
-    <div class="list-header">
+    <div class="list-header dark-text">
       <div class="centered-title"><h2 id="experience-title">experience</h2></div>
       <p>my professional journey so far</p>
     </div>
@@ -57,7 +57,7 @@ function render() {
       </article>`).join('')}`;
 
   proj.innerHTML = `
-    <div class="list-header">
+    <div class="list-header dark-text">
       <div class="centered-title"><h2 id="projects-title">projects</h2></div>
       <p>some stuff i've worked on</p>
     </div>
