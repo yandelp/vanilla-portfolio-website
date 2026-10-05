@@ -125,7 +125,7 @@ photoDialog.addEventListener('close', () => {
 
 // enlarge image cameos
 document.querySelectorAll('.cameos-inner .experiences-list').forEach(card => {
-  const image = card.querySelector('img');
+  const image = card.querySelector(':scope > img');
   if (!image) return;
   const opener = document.createElement('button');
   opener.type = 'button';

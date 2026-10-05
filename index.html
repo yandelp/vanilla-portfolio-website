@@ -59,7 +59,7 @@
     crossorigin="anonymous"
     referrerpolicy="no-referrer"
   >
-  <link rel="stylesheet" href="src/style.css?v=hero-mobile-5">
+  <link rel="stylesheet" href="src/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -105,7 +105,7 @@
   <main>
     <section id="home" class="hero">
       <div>
-        <img class="backdrop-img" src="src/assets/hero/sun.png">
+        <img class="backdrop-img" role="none" src="src/assets/hero/sun.png">
       </div>
       <div class="left-hero">
         <div id="hero-icon-ctn">
@@ -201,7 +201,18 @@
       <div class="cameos-inner">
         <figure class="experiences-list">
           <div class="podcast-stage">
-            <iframe src="https://www.youtube.com/embed/KP9fNRGhlV4" title="My Sharkcast episode" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <button
+              class="podcast-play"
+              type="button"
+              aria-label="Play my Sharkcast episode"
+            >
+              <img
+                src="https://i.ytimg.com/vi/KP9fNRGhlV4/hqdefault.jpg"
+                alt=""
+                loading="lazy"
+              >
+              <span aria-hidden="true">▶</span>
+            </button>
           </div>
           <figcaption class="pic-caption">check out my appearance on sharkcast!</figcaption>
         </figure>
@@ -236,5 +247,6 @@
     </div>
   </footer>
   <script type="module" src="src/main.js"></script>
+  <script type="module" src="src/podcast.js"></script>
 </body>
 </html>
