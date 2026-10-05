@@ -806,7 +806,7 @@ footer p { font-size: 13px; }
 /* animated gradient for emphasis */
 .emphasis {
   color: #0000;
-  background: linear-gradient(90deg, var(--accent), var(--text), #74b9ff, var(--accent));
+  background: linear-gradient(90deg, var(--accent), var(--text), var(--accent), var(--accent));
   text-decoration-color: var(--accent);
   background-size: 200% 100%;
   -webkit-background-clip: text;
